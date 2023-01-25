@@ -7,7 +7,7 @@ namespace Algorithms
         for (int i = 0; i < inputLength; i++) {
             int x = input.at(i);
             if (x == value) return i;
-            if (x > value) return -1;
+            if (x > value) return -1;   // Not found
         }
     }
 
@@ -16,6 +16,6 @@ namespace Algorithms
         for (int i = 0; i < inputLength; i++) {
             if (input.at(i) == value) return i;
         }
-        return -1;
+        return -1;  // Not found
     }
 }
