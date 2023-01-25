@@ -12,6 +12,7 @@ namespace Algorithms
 
         /**
          * @brief   Find the index of the requested value in a sorted vector of integers input.
+         *          Sorting to be added after getting to sorting algorithms.
          * 
          * @pre     input is of type int and sorted in a non-decreasing order
          * @post    return is of type int signifying the index of value or -1 if not found
