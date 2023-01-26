@@ -41,6 +41,7 @@ namespace Algorithms
     }
     #endif
 
+    #if !DETACH
     template<typename T, typename InputIterator>
     int BinarySearch::binarySearch(T value, InputIterator first, InputIterator last) {
         int size;
@@ -56,4 +57,5 @@ namespace Algorithms
         }        
         return -1;  // Not found
     }
+    #endif
 }
