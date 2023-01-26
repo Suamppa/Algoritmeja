@@ -3,7 +3,7 @@
 namespace Algorithms
 {
     #if USE_ITERS
-    // An implementation with iterators
+    // An implementation with iterators, a bit of a relic
     template<typename T, class Container>
     int BinarySearch::binarySearch(T value, Container & input) {
         int size;
