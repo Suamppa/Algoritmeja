@@ -5,7 +5,7 @@ namespace Algorithms
     template<typename T, class Container>
     int LinearSearch::sortedLinearSearch(T value, Container & input) {
         int inputLength = input.size();
-        for (int i = 0; i < inputLength; i++) {
+        for (int i = 0; i < inputLength; ++i) {
             T x = input.at(i);
             if (x == value) return i;
             if (x > value) return -1;   // Not found
@@ -28,7 +28,7 @@ namespace Algorithms
     template<typename T, class Container>
     int LinearSearch::unsortedLinearSearch(T value, Container & input) {
         int inputLength = input.size();
-        for (int i = 0; i < inputLength; i++) {
+        for (int i = 0; i < inputLength; ++i) {
             if (input.at(i) == value) return i;
         }
         return -1;  // Not found
