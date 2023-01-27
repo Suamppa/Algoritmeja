@@ -73,4 +73,4 @@ namespace Algorithms
     static int unsortedLinearSearch(T value, InputIterator first, InputIterator last);
 }
 
-#endif
+#endif // !LINEARSEARCH_H
