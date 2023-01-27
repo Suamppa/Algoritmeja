@@ -56,4 +56,4 @@ namespace Algorithms
     };
 }
 
-#endif
+#endif // !BINARYSEARCH_H

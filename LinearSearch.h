@@ -77,4 +77,4 @@ namespace Algorithms
     };
 }
 
-#endif
+#endif // !LINEARSEARCH_H
