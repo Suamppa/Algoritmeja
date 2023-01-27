@@ -12,7 +12,7 @@ namespace Algorithms
         auto mid = begin;
 
         while (begin <= end) {
-            size = std::distance(begin, end);
+            size = std::distance(begin, end);   // inefficiency
             mid = begin + (size / 2);
             if (*mid < value) begin = mid + 1;
             else if (*mid > value) end = mid - 1;
@@ -41,21 +41,24 @@ namespace Algorithms
     }
     #endif
 
+    /*
     #if !DETACH
-    template<typename T, typename InputIterator>
-    int BinarySearch::binarySearch(T value, InputIterator first, InputIterator last) {
-        int size;
-        auto mid = first;
-        auto start = first;
+    template<typename T, typename RandomAccessIterator>
+    int BinarySearch::binarySearch(T value, RandomAccessIterator first, RandomAccessIterator last, int size) {
+        // auto start = first;
+        auto checker = first;
+        int mid;
 
-        while (first != last) {
-            size = std::distance(first, last);
-            mid = first + (size / 2);
-            if (*mid < value) first = mid + 1;
-            else if (*mid > value) last = mid - 1;
-            else return std::distance(start, mid);  // Value found
+        while (*first <= *last) {
+            mid = (size - 1) / 2;   // Middle index
+            checker = first + mid;  // Iterator to check the value in the middle
+            if (*checker < value) first += mid + 1;
+            else if (*checker > value) last -= mid - 1;
+            else return mid;  // Value found
+            size = size / 2;
         }        
         return -1;  // Not found
     }
     #endif
+     */
 }
