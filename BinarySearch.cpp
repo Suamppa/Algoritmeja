@@ -5,7 +5,7 @@ namespace Algorithms
     #if USE_ITERS
     // An implementation with iterators, a bit of a relic
     template<typename T, class Container>
-    int BinarySearch::binarySearch(T value, Container & input) {
+    int binarySearch(T value, Container & input) {
         int size;
         auto begin = input.cbegin();
         auto end = input.cend();
@@ -24,7 +24,7 @@ namespace Algorithms
     #else
     // A more conventional implementation
     template<typename T, class Container>
-    int BinarySearch::binarySearch(T value, Container & input) {
+    int binarySearch(T value, Container & input) {
         int begin = 0;
         int end = input.size() - 1;
         int mid;
@@ -44,7 +44,7 @@ namespace Algorithms
     /*
     #if !DETACH
     template<typename T, typename RandomAccessIterator>
-    int BinarySearch::binarySearch(T value, RandomAccessIterator first, RandomAccessIterator last, int size) {
+    int binarySearch(T value, RandomAccessIterator first, RandomAccessIterator last, int size) {
         // auto start = first;
         auto checker = first;
         int mid;
