@@ -1,8 +1,6 @@
 #ifndef SELECTIONSORT_H
 #define SELECTIONSORT_H
 
-#include "Algorithms.h"
-
 namespace Algorithms
 {
     /**
