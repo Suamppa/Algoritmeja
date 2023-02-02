@@ -17,6 +17,14 @@ namespace Algorithms {
      */
     template<class Container>
     void swap(Container & container, int index1, int index2);
+
+    /**
+     * @brief   Returns the maximum value for a variable of type int.
+     *          This is done to avoid external libraries (<climits>).
+     * 
+     * @returns int, maximum value for a variable of type int
+     */
+    int intMax();
 }
 
 #endif // !ALGORITHMS_H
