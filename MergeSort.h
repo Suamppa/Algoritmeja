@@ -9,6 +9,8 @@ namespace Algorithms
      * 
      * @tparam  Container the container type
      * @param   container container to sort, will be modified directly
+     * @param   start starting index
+     * @param   end last index
      * @pre     container data is modifiable && container data is comparable
      * @post    container data is sorted in a non-descending order
      */
@@ -16,12 +18,7 @@ namespace Algorithms
     void mergeSort(Container & container, int start, int end);
 
     inline namespace Helper {
-        /**
-         * @brief   Helper function for mergeSort.
-         * 
-         * @tparam  Container the container type, must provide functions `size()` and `at()`
-         * @param   container 
-         */
+        // Helper function for mergeSort.
         template<class Container>
         void merge(Container & container, int start, int split, int end);
     }
