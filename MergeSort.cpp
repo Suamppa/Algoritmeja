@@ -29,15 +29,15 @@ void Algorithms::Helper::merge(Container & container, int start, int split, int 
         B[iB] = container[j];
         ++iB;
     }
-    A[sizeA] = intMax();
-    B[sizeB] = intMax();
+    A[sizeA] = std::numeric_limits<T>::max();
+    B[sizeB] = std::numeric_limits<T>::max();
     iA = 0;
     iB = 0;
     for (int j = start; j <= end; ++j) {
-        if (iA < sizeA && A[iA] <= B[iB]) {
+        if (A[iA] <= B[iB]) {
             container[j] = A[iA];
             ++iA;
-        } else if (iB < sizeB) {
+        } else {
             container[j] = B[iB];
             ++iB;
         }
