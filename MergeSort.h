@@ -7,13 +7,14 @@ namespace Algorithms
 {
     /**
      * @brief   Sort the container in non-descending order using a merge sort algorithm.
-     *          The algorithm is stable.
+     *          The algorithm is stable. Container must hold arithmetic data type.
      * 
      * @tparam  Container the container type
      * @param   container container to sort, will be modified directly
      * @param   start starting index
      * @param   end last index
      * @pre     container data is modifiable && container data is comparable
+     *          && container data is of arithmetic type
      * @post    container data is sorted in a non-descending order
      */
     template<class Container>
