@@ -27,7 +27,15 @@ namespace Algorithms {
     class Heap
     {
         Container & container;
-        int start, end, length, inHeap;
+        int start, end;
+        /**
+         * The total number of elements in the heap.
+         */
+        int length;
+        /**
+         * The number of elements currently in the heap. Note that inHeap <= length.
+         */
+        int inHeap;
     public:
         /**
          * @brief   Construct a new Heap object.
