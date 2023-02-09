@@ -4,9 +4,9 @@ using namespace Algorithms;
 
 template<class Container>
 void Algorithms::swap(Container & container, int index1, int index2) {
-    auto temp = container.at(index1);
-    container.at(index1) = container.at(index2);
-    container.at(index2) = temp;
+    auto temp = container[index1];
+    container[index1] = container[index2];
+    container[index2] = temp;
 }
 
 template<class Container>
