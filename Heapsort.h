@@ -1,6 +1,8 @@
 #ifndef HEAPSORT_H
 #define HEAPSORT_H
 
+#include "Algorithms.h"
+
 namespace Algorithms
 {
     /**
