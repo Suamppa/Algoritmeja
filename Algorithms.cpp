@@ -37,8 +37,8 @@ int Algorithms::Heap<Container>::right(int i) { return 2 * i + 2; }
 
 template<class Container>
 bool Algorithms::Heap<Container>::isInHeap(int i) {
-    if (i >= start && i <= end) return true;
-    return false;
+    if (i <= start || i >= start + inHeap) return false;
+    return true;
 }
 
 template<class Container>
