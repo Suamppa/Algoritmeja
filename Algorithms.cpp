@@ -21,6 +21,7 @@ int Algorithms::partition(Container & container, int start, int end, int pivot) 
         }
     }
     swap(container, left+1, pivot);
+    return left+1;  // Return the first index of the right partition
 }
 
 template<class Container>
