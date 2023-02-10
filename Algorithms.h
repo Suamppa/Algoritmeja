@@ -133,7 +133,10 @@ namespace Algorithms {
         auto & operator[](int i);
     };
 
-    inline namespace Helper {}
+    inline namespace Helper {
+        template<class Container>
+        int partition(Container & container, int start, int end);
+    }
 }
 
 #endif // !ALGORITHMS_H
