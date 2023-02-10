@@ -105,6 +105,8 @@ namespace Algorithms {
          */
         auto & operator[](int i);
     };
+
+    inline namespace Helper {}
 }
 
 #endif // !ALGORITHMS_H

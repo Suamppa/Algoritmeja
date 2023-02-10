@@ -21,7 +21,7 @@ namespace Algorithms
     template<class Container>
     void mergeSort(Container & container, int start, int end);
 
-    inline namespace Helper {
+    namespace Helper {
         // Helper function for mergeSort.
         template<class Container>
         void merge(Container & container, int start, int split, int end);
