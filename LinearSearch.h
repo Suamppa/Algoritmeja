@@ -1,8 +1,7 @@
 #ifndef LINEARSEARCH_H
 #define LINEARSEARCH_H
 
-// #include "Algorithms.h"
-// #include <vector>
+#include "Algorithms.h"
 
 namespace Algorithms
 {

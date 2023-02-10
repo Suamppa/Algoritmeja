@@ -1,6 +1,8 @@
 #ifndef INTERPOLATIONSEARCH_H
 #define INTERPOLATIONSEARCH_H
 
+#include "Algorithms.h"
+
 namespace Algorithms
 {
     /**
