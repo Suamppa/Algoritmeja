@@ -66,14 +66,16 @@ Container & Algorithms::Heap<Container>::getContainer() { return container; }
 template<class Container>
 auto & Algorithms::Heap<Container>::operator[](int i) { return container[i]; }
 
-/*
 template<class Container>
-void Algorithms::buildMaxHeap(Container & container) {
-
+int Algorithms::Helper::partition(Container & container, int start, int end, int pivot) {
+    if (pivot < 0 || pivot > end) pivot = end; // Pivot is the last element by default
+    else swap(container, pivot, end);   // Move pivot to the end
+    int left = start - 1;
+    for (int right = start; start < pivot; ++start) {
+        if (container[right] <= container[pivot]) {
+            ++left;
+            swap(container, left, right);
+        }
+    }
+    swap(container, left+1, pivot);
 }
-
-template<class Container>
-void Algorithms::fixMaxHeap(Container & container) {
-
-}
- */
