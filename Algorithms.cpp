@@ -21,6 +21,7 @@ int Algorithms::partition(Container & container, int start, int end, int pivot) 
         }
     }
     swap(container, left+1, pivot);
+    return left+1;  // Return the first index of the right partition
 }
 
 template<class Container>
@@ -33,9 +34,6 @@ Algorithms::Heap<Container>::Heap(Container & container, int first, int last) :
 
 template<class Container>
 int Algorithms::Heap<Container>::size() { return length; }
-
-// template<class Container>
-// int Algorithms::Heap<Container>::inHeap() { return inHeap; }
 
 template<class Container>
 int Algorithms::Heap<Container>::parent(int i) {
