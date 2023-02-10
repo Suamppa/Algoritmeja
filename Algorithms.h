@@ -17,6 +17,9 @@ namespace Algorithms {
      */
     template<class Container>
     void swap(Container & container, int index1, int index2);
+    
+    template<class Container>
+    int partition(Container & container, int start, int end, int pivot=-1);
 
     /**
      * @brief   Class to assign a container's index range to a heap structure.
@@ -133,10 +136,7 @@ namespace Algorithms {
         auto & operator[](int i);
     };
 
-    inline namespace Helper {
-        template<class Container>
-        int partition(Container & container, int start, int end);
-    }
+    inline namespace Helper {}
 }
 
 #endif // !ALGORITHMS_H
