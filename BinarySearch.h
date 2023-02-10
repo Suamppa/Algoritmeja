@@ -3,6 +3,7 @@
 // #define USE_ITERS 1
 // #define DETACH 1
 
+#include "Algorithms.h"
 /* 
 #if !DETACH
 #include <iterator>

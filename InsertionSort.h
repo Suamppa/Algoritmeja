@@ -1,6 +1,8 @@
 #ifndef INSERTIONSORT_H
 #define INSERTIONSORT_H
 
+#include "Algorithms.h"
+
 namespace Algorithms
 {
     /**
