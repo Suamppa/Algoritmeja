@@ -94,14 +94,41 @@ namespace Algorithms {
         /**
          * @brief   Get the underlying Container object by reference.
          * 
-         * @returns Container& the underlying container
+         * @returns Container&, the underlying container
          */
         Container & getContainer();
+        /**
+         * @brief   Get the number of elements currently in heap.
+         *          Note that inHeapCount() <= size().
+         *          This is for utility, not for length measurement.
+         * 
+         * @returns int, the number of elements in heap
+         */
+        int inHeapCount();
+        /**
+         * @brief   Set the number of elements currently in heap.
+         *          [This is just a quick solution for now.]
+         * 
+         * @param   num the value to set to
+         */
+        void setInHeapCount(int num);
+        /**
+         * @brief   Get the first index of the heap structure.
+         * 
+         * @returns int, the starting index
+         */
+        int getStart();
+        /**
+         * @brief   Get the last index of the heap structure.
+         * 
+         * @returns int, the last index
+         */
+        int getEnd();
         /**
          * @brief   Get element at index i.
          * 
          * @param   i index
-         * @returns auto& element at index i
+         * @returns auto&, element at index i
          */
         auto & operator[](int i);
     };

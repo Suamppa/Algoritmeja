@@ -20,8 +20,17 @@ Algorithms::Heap<Container>::Heap(Container & container, int first, int last) :
 template<class Container>
 int Algorithms::Heap<Container>::size() { return length; }
 
-// template<class Container>
-// int Algorithms::Heap<Container>::inHeap() { return inHeap; }
+template<class Container>
+int Algorithms::Heap<Container>::inHeapCount() { return inHeap; }
+
+template<class Container>
+void Algorithms::Heap<Container>::setInHeapCount(int num) { inHeap = num; }
+
+template<class Container>
+int Algorithms::Heap<Container>::getStart() { return start; }
+
+template<class Container>
+int Algorithms::Heap<Container>::getEnd() { return end; }
 
 template<class Container>
 int Algorithms::Heap<Container>::parent(int i) {
