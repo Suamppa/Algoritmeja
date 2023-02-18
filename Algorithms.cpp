@@ -76,4 +76,16 @@ template<class Container>
 Container & Algorithms::Heap<Container>::getContainer() { return container; }
 
 template<class Container>
+int Algorithms::Heap<Container>::inHeapCount() { return inHeap; }
+
+template<class Container>
+void Algorithms::Heap<Container>::setInHeapCount(int num) { inHeap = num; }
+
+template<class Container>
+int Algorithms::Heap<Container>::getStart() { return start; }
+
+template<class Container>
+int Algorithms::Heap<Container>::getEnd() { return end; }
+
+template<class Container>
 auto & Algorithms::Heap<Container>::operator[](int i) { return container[i]; }
