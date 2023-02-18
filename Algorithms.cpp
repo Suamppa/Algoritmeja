@@ -10,6 +10,21 @@ void Algorithms::swap(Container & container, int index1, int index2) {
 }
 
 template<class Container>
+int Algorithms::partition(Container & container, int start, int end, int pivot) {
+    if (pivot < 0 || pivot > end) pivot = end; // Pivot is the last element by default
+    else swap(container, pivot, end);   // Move pivot to the end
+    int left = start - 1;
+    for (int right = start; right < pivot; ++right) {
+        if (container[right] <= container[pivot]) {
+            ++left;
+            swap(container, left, right);
+        }
+    }
+    swap(container, left+1, pivot);
+    return left+1;  // Return the first index of the right partition
+}
+
+template<class Container>
 Algorithms::Heap<Container>::Heap(Container & container, int first, int last) :
     container(container), start(first), end(last)
 {
@@ -19,18 +34,6 @@ Algorithms::Heap<Container>::Heap(Container & container, int first, int last) :
 
 template<class Container>
 int Algorithms::Heap<Container>::size() { return length; }
-
-template<class Container>
-int Algorithms::Heap<Container>::inHeapCount() { return inHeap; }
-
-template<class Container>
-void Algorithms::Heap<Container>::setInHeapCount(int num) { inHeap = num; }
-
-template<class Container>
-int Algorithms::Heap<Container>::getStart() { return start; }
-
-template<class Container>
-int Algorithms::Heap<Container>::getEnd() { return end; }
 
 template<class Container>
 int Algorithms::Heap<Container>::parent(int i) {
@@ -74,15 +77,3 @@ Container & Algorithms::Heap<Container>::getContainer() { return container; }
 
 template<class Container>
 auto & Algorithms::Heap<Container>::operator[](int i) { return container[i]; }
-
-/*
-template<class Container>
-void Algorithms::buildMaxHeap(Container & container) {
-
-}
-
-template<class Container>
-void Algorithms::fixMaxHeap(Container & container) {
-
-}
- */
