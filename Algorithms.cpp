@@ -36,18 +36,6 @@ template<class Container>
 int Algorithms::Heap<Container>::size() { return length; }
 
 template<class Container>
-int Algorithms::Heap<Container>::inHeapCount() { return inHeap; }
-
-template<class Container>
-void Algorithms::Heap<Container>::setInHeapCount(int num) { inHeap = num; }
-
-template<class Container>
-int Algorithms::Heap<Container>::getStart() { return start; }
-
-template<class Container>
-int Algorithms::Heap<Container>::getEnd() { return end; }
-
-template<class Container>
 int Algorithms::Heap<Container>::parent(int i) {
     if (i <= 0) return 0;
     return (i - 1) / 2;
