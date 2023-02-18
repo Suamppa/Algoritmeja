@@ -14,7 +14,7 @@ int Algorithms::partition(Container & container, int start, int end, int pivot) 
     if (pivot < 0 || pivot > end) pivot = end; // Pivot is the last element by default
     else swap(container, pivot, end);   // Move pivot to the end
     int left = start - 1;
-    for (int right = start; start < pivot; ++start) {
+    for (int right = start; right < pivot; ++right) {
         if (container[right] <= container[pivot]) {
             ++left;
             swap(container, left, right);
