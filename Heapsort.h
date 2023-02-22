@@ -2,6 +2,7 @@
 #define HEAPSORT_H
 
 #include "Algorithms.h"
+#include "Heap.h"
 
 namespace Algorithms
 {
