@@ -6,7 +6,8 @@
 /**
  * Shared namespace for all the included algorithms
  */
-namespace Algorithms {
+namespace Algorithms
+{
     /**
      * @brief   Swaps the container's contents between the given indices.
      * 
